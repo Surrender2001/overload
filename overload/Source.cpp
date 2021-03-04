@@ -14,16 +14,19 @@ T Func(T a, T b, T c)
 
 int main()
 {
-	double a, b, c;
-	cin >> a >> b >> c;
-
-	MyClass aa(a), bb(b), cc(c);
-
-	MyClass e = Func<MyClass>(aa, bb, cc);
-
-	double pressF = Func<double>(a, b, c);
-	
+	double a, b, c,pressF;
+	float a2, b2, c2;
+	cin >> a2 >> b2 >> c2;
+	pressF = Func(a2, b2, c2);
 	cout << "Result double: " << pressF << endl;
-	cout << "Result MyclASS: " << e.getA() << endl;
+
+	cin >> a >> b >> c;
+	MyClass class1(a), class2(b), class3(c);
+	MyClass e = Func(class1, class2, class3);
+
+	
+	
+	
+	cout << "Result Myclass: " << e.getA() << endl;
 	return 0;
 }

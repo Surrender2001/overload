@@ -13,35 +13,30 @@ MyClass::MyClass(double a)
 MyClass MyClass::operator/(MyClass& myclass)
 {
 	MyClass temp( this->getA() / myclass.getA());
-	cout << "operator /" << temp.getA() << endl;
 	return temp;
 }
 
 MyClass MyClass::operator*(MyClass& myclass)
 {
 	MyClass temp(this->getA() * myclass.getA());
-	cout << "operator *" << temp.getA() << endl;
 	return temp;
 }
 
 MyClass MyClass::operator-(MyClass& myclass)
 {
 	MyClass temp(this->getA() - myclass.getA());
-	cout << "operator -" << temp.getA() << endl;
 	return temp;
 }
 
 MyClass MyClass::operator-(double b)
 {
 	MyClass temp(this->getA() - b);
-	cout << "operator -double" << temp.getA() << endl;
 	return temp;
 }
 
 MyClass MyClass::operator-()
 {
 	MyClass temp(this->getA() * (-1));
-	cout << "operator -u" << temp.getA() << endl;
 	return temp;
 }
 
